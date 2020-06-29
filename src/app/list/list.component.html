@@ -1,0 +1,14 @@
+ <h3 (click)="goBack()"><< Back</h3>
+ <h1> {{ title }} </h1>
+<ul *ngIf="menus && haveSubCategory">
+    <li *ngFor="let cat of categories" (click)="checkSubcategory(cat.id)" >
+        <p class="name">{{ cat.name }}</p>
+        <img src="http://106.51.39.91:9000/imgdld/550ee0f13a00008d01c8a496/5526c614600000dc010af1e0-wood_Cover 1.png" >
+    </li>
+</ul>
+<ul *ngIf="menus && haveSubCategory === false">
+    <li *ngFor="let item of categories" >
+        <p class="name">{{ item.name }}</p>
+        <p class="description"> {{ item.description }}</p>
+    </li>
+</ul>
